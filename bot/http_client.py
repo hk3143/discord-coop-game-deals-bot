@@ -6,6 +6,8 @@ import requests
 from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
 
+USER_AGENT = "Discord-Co-op-Deals-Bot/1.0 (hk3143; https://github.com/hk3143/discord-coop-game-deals-bot)"
+
 
 def build_session(retries: int = 3, backoff_factor: float = 0.5) -> requests.Session:
     retry = Retry(
@@ -20,6 +22,7 @@ def build_session(retries: int = 3, backoff_factor: float = 0.5) -> requests.Ses
     )
     adapter = HTTPAdapter(max_retries=retry)
     session = requests.Session()
+    session.headers.update({"User-Agent": USER_AGENT})
     session.mount("http://", adapter)
     session.mount("https://", adapter)
     return session
