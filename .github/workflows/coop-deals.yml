@@ -63,11 +63,11 @@ jobs:
             echo
             echo "| Key | Value |"
             echo "| --- | ----- |"
-            echo "| Trigger | `${{ github.event_name }}` |"
-            echo "| Profile | `${{ github.event.inputs.profile_name || 'default' }}` |"
-            echo "| Digest mode | `${{ github.event.inputs.digest_mode || 'daily' }}` |"
-            echo "| Ref | `${{ github.ref_name }}` |"
-            echo "| SHA | `${{ github.sha }}` |"
+            echo "| Trigger | ${{ github.event_name }} |"
+            echo "| Profile | ${{ github.event.inputs.profile_name || 'default' }} |"
+            echo "| Digest mode | ${{ github.event.inputs.digest_mode || 'daily' }} |"
+            echo "| Ref | ${{ github.ref_name }} |"
+            echo "| SHA | ${{ github.sha }} |"
             echo
             echo "### Runtime config"
             echo "- Python: 3.11"
