@@ -38,7 +38,7 @@ def fetch_deals(
         "upperPrice": f"{upper_price:.2f}",
         "pageSize": "60",
         "onSale": "1",
-        "sortBy": "Deal Rating",
+        "sortBy": "Reviews",
         "desc": "1",
     }
     if steamworks_only:
